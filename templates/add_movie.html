@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add movie to user {{user}} movie list</title>
+      <link rel="stylesheet" href="../../static/style.css">
+</head>
+<body>
+<h1>Add movie to user {{user}} movie list</h1>
+<h3>{{message}}</h3>
+<div class="form">
+<form  action='/users/{{user_id}}/add_movie' method='POST'>
+  <label for="movie_name">Movie Name:</label><br>
+  <input type="text" id="movie_name" name="movie_name" required><br>
+    <input type="hidden" id="user_id" name="user_id" value = "{{ user_id }}"><br>
+  <input type="submit" value="Add Movie" />
+</form>
+</div>
+
+
+
+{%if number_movies > 0 %}
+              <p style="list-style-type:none; margin-bottom:1em">Currently there are {{ number_movies }} movies on {{ user }}'s list</p>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Director</th>
+            <th>Year </th>
+            <th>Rating</th>
+            <th>Update</th>
+             <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+    {%for movie in movies%}
+         <tr>
+            <td>{{ movie['name'] }}</td>
+            <td>{{ movie['director'] }}</td>
+            <td>{{ movie['year'] }}</td>
+            <td>{{ movie['rating'] }}</td>
+         <td><a href="/users/{{user_id}}/update_movie/{{movie['id']}}" title ="update {{movie['name']}}">Update</a></td>
+            <td><a href="/users/{{user_id}}/delete_movie/{{movie['id']}}" title ="deleter {{movie['name']}}">Delete</a></td>
+        </tr>
+    {%endfor%}
+</tbody>
+</table>
+    </div>
+{% else %}
+    <p>No available movies for {{user}}'s list at this point</p>
+
+{% endif %}
+<p><a href="/"><<< Return to main user list</a></p>
+</body>
+</html>

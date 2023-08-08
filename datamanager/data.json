@@ -1,0 +1,84 @@
+[
+    {
+        "id": 1,
+        "name": "Alice",
+        "movies": [
+            {
+                "id": 1,
+                "name": "Indiana Jones and the Last Crusade: The Action Game",
+                "director": "N/A",
+                "year": 1993,
+                "rating": "N/A"
+            },
+            {
+                "id": 2,
+                "name": "Batman v Superman: Dawn of Justice (Ultimate Edition)",
+                "director": "Zack Snyder",
+                "year": 2016,
+                "rating": 7.2
+            },
+            {
+                "id": 3,
+                "name": "Superman/Batman: Apocalypse",
+                "director": "Lauren Montgomery",
+                "year": 2010,
+                "rating": 7.1
+            },
+            {
+                "id": 4,
+                "name": "Star Trek",
+                "director": "J.J. Abrams",
+                "year": 2009,
+                "rating": 7.9
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Bob",
+        "movies": []
+    },
+    {
+        "id": 3,
+        "name": "Humberto",
+        "movies": []
+    },
+    {
+        "id": 4,
+        "name": "Toni",
+        "movies": [
+            {
+                "id": 1,
+                "name": "Merry Xmas",
+                "director": "Boman Modine",
+                "year": 2016,
+                "rating": 7.3
+            },
+            {
+                "id": 2,
+                "name": "Indiana Jones and the Fate of Atlantis part2",
+                "director": "Hal Barwood",
+                "year": 1992,
+                "rating": 9.2
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Tiago",
+        "movies": []
+    },
+    {
+        "id": 9,
+        "name": "Margarida",
+        "movies": [
+            {
+                "id": 1,
+                "name": "Batman v Superman: Dawn of Justice (Ultimate Edition)",
+                "director": "Zack Snyder",
+                "year": 2016,
+                "rating": 7.2
+            }
+        ]
+    }
+]
